@@ -183,7 +183,7 @@ console.log(getNamesSortedByFriendsCount(users));
 // Skills
 const getSortedUniqueSkills = users => {
     const unical = users
-      .flatMap(({skills})=>skills).filter((itm, idx, arr) => arr.indexOf(itm) === idx).sort();
+      .flatMap(({skills})=>skills).filter((itm, idx, arr) => arr.indexOf(itm) === idx).sort((a, b) => a.localeCompare(b));
     return unical;
 };
 
